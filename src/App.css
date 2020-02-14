@@ -21,6 +21,12 @@
   font-family: 'Poppins', sans-serif;
 }
 
+@media screen and (max-width: 650px) {
+  .button-text {
+    display: none;
+  }
+}
+
 .App {
   text-align: center;
 }
