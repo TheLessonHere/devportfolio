@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { useMediaQuery } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import ArrowBackSharpIcon from '@material-ui/icons/ArrowBackSharp';
 import EmailSharpIcon from '@material-ui/icons/EmailSharp';
@@ -40,7 +41,39 @@ const useStyles = makeStyles(theme => ({
         borderRadius: "25px",
         boxShadow: "5px 5px 15px black"
     },
+    contentContainerTablet: {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "400px",
+        maxWidth: "750px",
+        width: "95%",
+        marginTop: "50px",
+        margin: "0 auto",
+        backgroundColor: "rgba(122, 136, 152, 0.5)",
+        borderRadius: "25px",
+        boxShadow: "5px 5px 15px black",
+    },
+    contentContainerMobile: {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "900px",
+        maxWidth: "650px",
+        width: "95%",
+        marginTop: "50px",
+        margin: "0 auto",
+        backgroundColor: "rgba(122, 136, 152, 0.5)",
+        borderRadius: "25px",
+        boxShadow: "5px 5px 15px black",
+    },
     iconContainer: {
+        marginRight: "5px",
+        marginLeft: "5px",
+        marginTop: "10px",
+        paddingTop: "20px"
+    },
+    iconContainerMobile: {
         marginRight: "5px",
         marginLeft: "5px",
         marginTop: "10px",
@@ -51,15 +84,27 @@ const useStyles = makeStyles(theme => ({
         transition: "0.75s",
         color: "whitesmoke",
     },
+    iconMobile: {
+        fontSize: "8em",
+        transition: "0.75s",
+        color: "whitesmoke",
+    },
     ulist: {
         padding: "300px auto",
         width: "90%"
+    },
+    ulistMobile: {
+        display: "flex",
+        flexFlow: "column",
+        alignItems: "center",
+        padding: "300px auto",
+        width: "90%",
     },
     ulistel: {
         listStyle: "none",
         float: "left",
         textAlign: "center",
-        width: "33.3%",
+        width: "50%",
 
         "&:hover svg":{
             transform: "translateY(-20px) scale(.5)"
@@ -69,21 +114,44 @@ const useStyles = makeStyles(theme => ({
             opacity: "1"
         }
     },
+    ulistelMobile: {
+        listStyle: "none",
+        float: "left",
+        textAlign: "center",
+        width: "100%",
+
+        "&:hover svg":{
+            transform: "translateY(-20px) scale(.5)"
+        },
+        "&:hover div":{
+            transform: "translateY(-20px)",
+            opacity: "1"
+        }
+    },
+    info: {
+        fontSize: "1rem",
+        fontFamily: "'Poppins', sans-serif",
+        color: "whitesmoke"
+    }
 }));
 
 function Contact(props){
     const classes = useStyles();
+    const tablet = useMediaQuery("(max-width: 700px)");
+    const mobile = useMediaQuery("(max-width: 650px)");
 
     return(
         <div className={classes.container}>
             <Link to="/">
                 <ArrowBackSharpIcon className={classes.backButton}/>
             </Link>
-            <div className={classes.contentContainer}>
-                <ul className={classes.ulist}>
-                    <li className={classes.ulistel}>
-                        <div className={classes.iconContainer}>
-                                <EmailSharpIcon className={classes.icon}/>
+            <div className={mobile ? classes.contentContainerMobile: 
+                            tablet ? classes.contentContainerTablet: 
+                            classes.contentContainer}>
+                <ul className={mobile ? classes.ulistMobile : classes.ulist}>
+                    <li className={mobile ? classes.ulistelMobile: classes.ulistel}>
+                        <div className={mobile ? classes.iconContainerMobile : classes.iconContainer}>
+                                <EmailSharpIcon className={mobile ? classes.iconMobile : classes.icon}/>
                                 <div id="email" className="button-text">
                                     levithomasfswd@gmail.com
                                     <br/>
@@ -91,11 +159,19 @@ function Contact(props){
                                     <br/>
                                     levithomas0@live.com
                                 </div>
+                                {mobile && 
+                                <div className={classes.info}>
+                                    levithomasfswd@gmail.com
+                                    <br/>
+                                    or
+                                    <br/>
+                                    levithomas0@live.com
+                                </div>}
                         </div>
                     </li>
                     <li className={classes.ulistel}>
-                        <div className={classes.iconContainer}>
-                                <RoomSharpIcon className={classes.icon}/>
+                        <div className={mobile ? classes.iconContainerMobile : classes.iconContainer}>
+                                <RoomSharpIcon className={mobile ? classes.iconMobile : classes.icon}/>
                                 <div id="location" className="button-text">
                                     Ogden, UT
                                     <br/>
@@ -103,16 +179,30 @@ function Contact(props){
                                     <br/>
                                     The Greater Salt Lake Area
                                 </div>
+                                {mobile && 
+                                <div className={classes.info}>
+                                    Ogden, UT
+                                    <br/>
+                                    and
+                                    <br/>
+                                    The Greater Salt Lake Area
+                                </div>}
                         </div>
                     </li>
                     <li className={classes.ulistel}>
-                        <div className={classes.iconContainer}>
-                                <PhoneSharpIcon className={classes.icon}/>
+                        <div className={mobile ? classes.iconContainerMobile : classes.iconContainer}>
+                                <PhoneSharpIcon className={mobile ? classes.iconMobile : classes.icon}/>
                                 <div id="mobile" className="button-text">
                                     Mobile
                                     <br/>
                                     916.914.9891
                                 </div>
+                                {mobile && 
+                                <div className={classes.info}>
+                                    Mobile
+                                    <br/>
+                                    916.914.9891
+                                </div>}
                         </div>
                     </li>
                 </ul>

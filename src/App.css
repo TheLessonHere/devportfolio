@@ -13,6 +13,8 @@
 }
 
 .button-text {
+  justify-content: center;
+  align-items: center;
   font-size: 2rem;
   opacity: 0;
   transition: 0.75s;
@@ -21,9 +23,24 @@
   font-family: 'Poppins', sans-serif;
 }
 
+@media screen and (max-width: 1000px) {
+  #root {
+    height: 250vh;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #root {
+    height: 300vh;
+  }
+}
+
 @media screen and (max-width: 650px) {
   .button-text {
     display: none;
+  }
+  #root {
+    height: 400vh;
   }
 }
 

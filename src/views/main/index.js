@@ -67,6 +67,11 @@ const useStyles = makeStyles(theme => ({
         transition: "0.75s",
         color: "whitesmoke",
     },
+    iconTinyMobile: {
+        fontSize: "8em",
+        transition: "0.75s",
+        color: "whitesmoke",
+    },
     ulist: {
         padding: "300px auto",
         width: "90%",
@@ -144,6 +149,7 @@ function Main(props){
     const classes = useStyles();
     const tablet = useMediaQuery("(max-width: 800px)");
     const mobile = useMediaQuery("(max-width: 650px)");
+    const tinyMobile = useMediaQuery("(max-width: 400px)");
 
     return(
         <div className={classes.container}>
@@ -154,7 +160,7 @@ function Main(props){
                     <li className={mobile ? classes.ulistelMobile : classes.ulistel}>
                         <Link to="/about">
                         <div className={classes.iconContainer}>
-                                <InfoSharpIcon className={classes.icon}/>
+                                <InfoSharpIcon className={tinyMobile ? classes.iconTinyMobile : classes.icon}/>
                                 <div className="button-text">About</div>
                                 {mobile && <div className={classes.mobileHeader}>About</div>}
                         </div>
@@ -163,7 +169,7 @@ function Main(props){
                     <li className={mobile ? classes.ulistelMobile : classes.ulistel}>
                         <Link to="/skills">
                         <div className={classes.iconContainer}>
-                                <CodeSharpIcon className={classes.icon}/>
+                                <CodeSharpIcon className={tinyMobile ? classes.iconTinyMobile : classes.icon}/>
                                 <div className="button-text">Skills</div>
                                 {mobile && <div className={classes.mobileHeader}>Skills</div>}
                         </div>
@@ -172,7 +178,7 @@ function Main(props){
                     <li className={mobile ? classes.ulistelMobile : classes.ulistel}>
                         <Link to="/projects">
                         <div className={classes.iconContainer}>
-                                <StarsSharpIcon className={classes.icon}/>
+                                <StarsSharpIcon className={tinyMobile ? classes.iconTinyMobile : classes.icon}/>
                                 <div className="button-text">Projects</div>
                                 {mobile && <div className={classes.mobileHeader}>Projects</div>}
                         </div>
@@ -181,7 +187,7 @@ function Main(props){
                     <li className={mobile ? classes.ulistelMobile : classes.ulistel}>
                         <Link to="/contact">
                         <div className={classes.iconContainer}>
-                                <CallEndSharpIcon className={classes.icon}/>
+                                <CallEndSharpIcon className={tinyMobile ? classes.iconTinyMobile : classes.icon}/>
                                 <div className="button-text">Contact</div>
                                 {mobile && <div className={classes.mobileHeader}>Contact</div>}
                         </div>
