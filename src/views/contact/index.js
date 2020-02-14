@@ -104,7 +104,7 @@ const useStyles = makeStyles(theme => ({
         listStyle: "none",
         float: "left",
         textAlign: "center",
-        width: "50%",
+        width: "33.3%",
 
         "&:hover svg":{
             transform: "translateY(-20px) scale(.5)"
