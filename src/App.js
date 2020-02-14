@@ -1,6 +1,6 @@
 // Dependencies
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { HashRouter as Router, Route } from 'react-router-dom';
 // Components
 import Main from './views/main'
 import About from './views/about'
@@ -12,7 +12,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/">
       <Route exact path ="/" component={Main} />
       <Route exact path ="/about" component={About} />
       <Route exact path ="/skills" component={Skills} />
