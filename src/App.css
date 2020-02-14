@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  height: 200vh;
+  animation: animate 15s ease infinite;
+}
+
+#root div:not(.button-text){
+  animation: fadein 1.5s;
+}
+
+.button-text {
+  font-size: 2rem;
+  opacity: 0;
+  transition: 0.75s;
+  transform: translateY(20px);
+  color: whitesmoke;
+  font-family: 'Poppins', sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+@keyframes animate {
+  0%{
+    background-color: rgb(22, 55, 92);
+  }
+  5%{
+    background-color: rgb(21, 48, 80);
+  }
+  10%{
+    background-color: rgb(20, 43, 71);
+  }
+  15%{
+    background-color: rgb(14, 35, 59);
+  }
+  20%{
+    background-color: rgb(20, 36, 54);
+  }
+  25%{
+    background-color: rgb(21, 33, 46);
+  }
+  30%{
+    background-color: rgb(24, 35, 48);
+  }
+  35%{
+    background-color: rgb(24, 37, 53);
+  }
+  40%{
+    background-color: rgb(18, 31, 46);
+  }
+  45%{
+    background-color: rgb(14, 25, 37);
+  }
+  50%{
+    background-color: rgb(7, 18, 31);
+  }
+  55%{
+    background-color: rgb(14, 25, 37);
+  }
+  60%{
+    background-color: rgb(18, 31, 46);
+  }
+  65%{
+    background-color: rgb(24, 37, 53);
+  }
+  70%{
+    background-color: rgb(24, 35, 48);
+  }
+  75%{
+    background-color: rgb(21, 33, 46);
+  }
+  80%{
+    background-color: rgb(20, 36, 54);
+  }
+  85%{
+    background-color: rgb(14, 35, 59);
+  }
+  90%{
+    background-color: rgb(20, 43, 71);
+  }
+  95%{
+    background-color: rgb(21, 48, 80);
+  }
+  100%{
+    background-color: rgb(22, 55, 92);
+  }
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+#email {
+  font-size: 1rem;
+}
+
+#location {
+  font-size: 1rem;
+}
+
+#mobile {
+  font-size: 1rem;
+}
