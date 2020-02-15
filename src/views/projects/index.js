@@ -34,12 +34,13 @@ const useStyles = makeStyles(theme => ({
         paddingRight: "10px"
     },
     videoContainer: {
+        marginTop: "75px",
         maxWidth: "560px",
         width: "100%",
         height: "400px",
     },
     videoContainerMobile: {
-        marginTop: "30px",
+        marginTop: "75px",
         maxWidth: "500px",
         width: "100%",
         height: "400px",
@@ -47,15 +48,16 @@ const useStyles = makeStyles(theme => ({
     textContainer: {
         display: "flex",
         flexFlow: "column",
-        justifyContent: "center",
+        justifyContent: "flex-start",
         alignItems: "center",
-        height: "900px",
+        height: "800px",
         maxWidth: "1200px",
         width: "100%",
         marginTop: "30px",
         margin: "0 auto",
         paddingLeft: "50px",
         paddingRight: "50px",
+        paddingTop: "20px",
         backgroundColor: "rgba(122, 136, 152, 0.5)",
         borderRadius: "25px",
         boxShadow: "5px 5px 15px black"
@@ -63,8 +65,6 @@ const useStyles = makeStyles(theme => ({
     textContainerSmallDesk: {
         display: "flex",
         flexFlow: "column",
-        justifyContent: "center",
-        alignItems: "center",
         height: "1100px",
         maxWidth: "1000px",
         width: "95%",
@@ -72,6 +72,7 @@ const useStyles = makeStyles(theme => ({
         margin: "0 auto",
         paddingLeft: "50px",
         paddingRight: "50px",
+        paddingTop: "20px",
         backgroundColor: "rgba(122, 136, 152, 0.5)",
         borderRadius: "25px",
         boxShadow: "5px 5px 15px black"
@@ -79,8 +80,6 @@ const useStyles = makeStyles(theme => ({
     textContainerTablet: {
         display: "flex",
         flexFlow: "column",
-        justifyContent: "center",
-        alignItems: "center",
         height: "1350px",
         maxWidth: "800px",
         width: "95%",
@@ -88,6 +87,7 @@ const useStyles = makeStyles(theme => ({
         margin: "0 auto",
         paddingLeft: "50px",
         paddingRight: "50px",
+        paddingTop: "20px",
         backgroundColor: "rgba(122, 136, 152, 0.5)",
         borderRadius: "25px",
         boxShadow: "5px 5px 15px black"
@@ -95,15 +95,29 @@ const useStyles = makeStyles(theme => ({
     textContainerMobile: {
         display: "flex",
         flexFlow: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "2200px",
-        maxWidth: "350px",
+        height: "2550px",
+        maxWidth: "300px",
         width: "95%",
         marginTop: "30px",
         margin: "0 auto",
         paddingLeft: "20px",
         paddingRight: "20px",
+        paddingTop: "20px",
+        backgroundColor: "rgba(122, 136, 152, 0.5)",
+        borderRadius: "25px",
+        boxShadow: "5px 5px 15px black"
+    },
+    textContainerTinyMobile: {
+        display: "flex",
+        flexFlow: "column",
+        height: "2850px",
+        maxWidth: "300px",
+        width: "95%",
+        marginTop: "30px",
+        margin: "0 auto",
+        paddingLeft: "20px",
+        paddingRight: "20px",
+        paddingTop: "20px",
         backgroundColor: "rgba(122, 136, 152, 0.5)",
         borderRadius: "25px",
         boxShadow: "5px 5px 15px black"
@@ -125,9 +139,10 @@ const useStyles = makeStyles(theme => ({
 
 function Projects(props){
     const classes = useStyles();
-    const smallDesk = useMediaQuery("(max-width: 1000px)");
+    const smallDesk = useMediaQuery("(max-width: 1200px)");
     const tablet = useMediaQuery("(max-width: 800px)");
     const mobile = useMediaQuery("(max-width: 650px)");
+    const tinyMobile = useMediaQuery("(max-width: 350px)");
 
     return(
         <div className={classes.container}>
@@ -144,7 +159,8 @@ function Projects(props){
                             allowfullscreen>
                     </iframe>
                 </div>
-                <div className={mobile ? classes.textContainerMobile : 
+                <div className={tinyMobile ? classes.textContainerTinyMobile : 
+                                mobile ? classes.textContainerMobile : 
                                 tablet ? classes.textContainerTablet : 
                                 smallDesk ? classes.textContainerSmallDesk : 
                                 classes.textContainer}>

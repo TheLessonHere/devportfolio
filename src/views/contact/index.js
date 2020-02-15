@@ -32,10 +32,10 @@ const useStyles = makeStyles(theme => ({
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        height: "400px",
+        height: "375px",
         maxWidth: "1200px",
         width: "100%",
-        marginTop: "150px",
+        marginTop: "200px",
         margin: "0 auto",
         backgroundColor: "rgba(122, 136, 152, 0.5)",
         borderRadius: "25px",
@@ -61,7 +61,7 @@ const useStyles = makeStyles(theme => ({
         height: "900px",
         maxWidth: "650px",
         width: "95%",
-        marginTop: "50px",
+        marginTop: "100px",
         margin: "0 auto",
         backgroundColor: "rgba(122, 136, 152, 0.5)",
         borderRadius: "25px",
@@ -97,7 +97,6 @@ const useStyles = makeStyles(theme => ({
         display: "flex",
         flexFlow: "column",
         alignItems: "center",
-        padding: "300px auto",
         width: "90%",
     },
     ulistel: {
@@ -169,7 +168,7 @@ function Contact(props){
                                 </div>}
                         </div>
                     </li>
-                    <li className={classes.ulistel}>
+                    <li className={mobile ? classes.ulistelMobile: classes.ulistel}>
                         <div className={mobile ? classes.iconContainerMobile : classes.iconContainer}>
                                 <RoomSharpIcon className={mobile ? classes.iconMobile : classes.icon}/>
                                 <div id="location" className="button-text">
@@ -189,7 +188,7 @@ function Contact(props){
                                 </div>}
                         </div>
                     </li>
-                    <li className={classes.ulistel}>
+                    <li className={mobile ? classes.ulistelMobile: classes.ulistel}>
                         <div className={mobile ? classes.iconContainerMobile : classes.iconContainer}>
                                 <PhoneSharpIcon className={mobile ? classes.iconMobile : classes.icon}/>
                                 <div id="mobile" className="button-text">

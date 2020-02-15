@@ -115,6 +115,7 @@ const useStyles = makeStyles(theme => ({
         fontFamily: "'Poppins', sans-serif",
         fontSize: "4rem",
         margin: "0 auto",
+        marginTop: "75px",
         color: "whitesmoke"
     },
     header1Mobile: {

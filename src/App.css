@@ -40,7 +40,7 @@
     display: none;
   }
   #root {
-    height: 450vh;
+    height: 500vh;
   }
 }
 
@@ -50,67 +50,67 @@
 
 @keyframes animate {
   0%{
-    background-color: rgb(22, 55, 92);
+    background-color: rgb(40, 60, 80);
   }
   5%{
-    background-color: rgb(21, 48, 80);
+    background-color: rgb(36, 54, 74);
   }
   10%{
-    background-color: rgb(20, 43, 71);
+    background-color: rgb(32, 48, 68);
   }
   15%{
-    background-color: rgb(14, 35, 59);
+    background-color: rgb(28, 42, 62);
   }
   20%{
-    background-color: rgb(20, 36, 54);
+    background-color: rgb(24, 36, 56);
   }
   25%{
-    background-color: rgb(21, 33, 46);
+    background-color: rgb(20, 30, 50);
   }
   30%{
-    background-color: rgb(24, 35, 48);
+    background-color: rgb(16, 24, 44);
   }
   35%{
-    background-color: rgb(24, 37, 53);
+    background-color: rgb(12, 18, 38);
   }
   40%{
-    background-color: rgb(18, 31, 46);
+    background-color: rgb(8, 12, 32);
   }
   45%{
-    background-color: rgb(14, 25, 37);
+    background-color: rgb(4, 6, 26);
   }
   50%{
-    background-color: rgb(7, 18, 31);
+    background-color: rgb(0, 0, 20);
   }
   55%{
-    background-color: rgb(14, 25, 37);
+    background-color: rgb(4, 6, 26);
   }
   60%{
-    background-color: rgb(18, 31, 46);
+    background-color: rgb(8, 12, 32);
   }
   65%{
-    background-color: rgb(24, 37, 53);
+    background-color: rgb(12, 18, 38);
   }
   70%{
-    background-color: rgb(24, 35, 48);
+    background-color: rgb(16, 24, 44);
   }
   75%{
-    background-color: rgb(21, 33, 46);
+    background-color: rgb(20, 30, 50);
   }
   80%{
-    background-color: rgb(20, 36, 54);
+    background-color: rgb(24, 36, 56);
   }
   85%{
-    background-color: rgb(14, 35, 59);
+    background-color: rgb(28, 42, 62);
   }
   90%{
-    background-color: rgb(20, 43, 71);
+    background-color: rgb(32, 48, 68);
   }
   95%{
-    background-color: rgb(21, 48, 80);
+    background-color: rgb(36, 54, 74);
   }
   100%{
-    background-color: rgb(22, 55, 92);
+    background-color: rgb(40, 60, 80);
   }
 }
 

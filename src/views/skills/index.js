@@ -38,6 +38,7 @@ const useStyles = makeStyles(theme => ({
         width: "100%",
         height: "400px",
         borderRadius: "25px",
+        marginTop: "75px",
         boxShadow: "5px 5px 15px black"
     },
     imageContainerMobile: {
@@ -45,20 +46,22 @@ const useStyles = makeStyles(theme => ({
         width: "100%",
         height: "300px",
         borderRadius: "25px",
+        marginTop: "75px",
         boxShadow: "5px 5px 15px black"
     },
     textContainer: {
         display: "flex",
         flexFlow: "column",
-        justifyContent: "center",
+        justifyContent: "flex-start",
         alignItems: "center",
-        height: "550px",
+        height: "450px",
         maxWidth: "1200px",
         width: "100%",
         marginTop: "30px",
         margin: "0 auto",
         paddingLeft: "50px",
         paddingRight: "50px",
+        paddingTop: "20px",
         backgroundColor: "rgba(122, 136, 152, 0.5)",
         borderRadius: "25px",
         boxShadow: "5px 5px 15px black"
@@ -66,8 +69,6 @@ const useStyles = makeStyles(theme => ({
     textContainerSmallDesk: {
         display: "flex",
         flexFlow: "column",
-        justifyContent: "center",
-        alignItems: "center",
         height: "650px",
         maxWidth: "1000px",
         width: "95%",
@@ -75,6 +76,7 @@ const useStyles = makeStyles(theme => ({
         margin: "0 auto",
         paddingLeft: "50px",
         paddingRight: "50px",
+        paddingTop: "20px",
         backgroundColor: "rgba(122, 136, 152, 0.5)",
         borderRadius: "25px",
         boxShadow: "5px 5px 15px black"
@@ -82,8 +84,6 @@ const useStyles = makeStyles(theme => ({
     textContainerTablet: {
         display: "flex",
         flexFlow: "column",
-        justifyContent: "center",
-        alignItems: "center",
         height: "800px",
         maxWidth: "800px",
         width: "95%",
@@ -91,6 +91,7 @@ const useStyles = makeStyles(theme => ({
         margin: "0 auto",
         paddingLeft: "50px",
         paddingRight: "50px",
+        paddingTop: "20px",
         backgroundColor: "rgba(122, 136, 152, 0.5)",
         borderRadius: "25px",
         boxShadow: "5px 5px 15px black"
@@ -98,15 +99,14 @@ const useStyles = makeStyles(theme => ({
     textContainerMobile: {
         display: "flex",
         flexFlow: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "1450px",
-        maxWidth: "350px",
+        height: "1750px",
+        maxWidth: "300px",
         width: "95%",
         marginTop: "30px",
         margin: "0 auto",
         paddingLeft: "20px",
         paddingRight: "20px",
+        paddingTop: "20px",
         backgroundColor: "rgba(122, 136, 152, 0.5)",
         borderRadius: "25px",
         boxShadow: "5px 5px 15px black"
@@ -140,7 +140,7 @@ const useStyles = makeStyles(theme => ({
 
 function Skills(props){
     const classes = useStyles();
-    const smallDesk = useMediaQuery("(max-width: 1000px)");
+    const smallDesk = useMediaQuery("(max-width: 1200px)");
     const tablet = useMediaQuery("(max-width: 800px)");
     const mobile = useMediaQuery("(max-width: 650px)");
 
