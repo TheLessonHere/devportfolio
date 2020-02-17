@@ -54,7 +54,7 @@ const useStyles = makeStyles(theme => ({
         flexFlow: "column",
         justifyContent: "flex-start",
         alignItems: "center",
-        height: "325px",
+        height: "315px",
         maxWidth: "1200px",
         width: "100%",
         marginTop: "30px",
@@ -154,7 +154,7 @@ function About(props){
             </Link>
             <div className={classes.contentContainer}>
                 <div className={mobile ? classes.imageContainerMobile : classes.imageContainer}>
-                    <img className={mobile ? classes.imageMobile : classes.image} src={require("../../assets/headshot.png")} alt="headshot"/>
+                    <img className={mobile ? classes.imageMobile : classes.image} src={require("../../assets/newheadshot.png")} alt="headshot"/>
                 </div>
                 <div className={mobile ? classes.textContainerMobile : 
                                 tablet ? classes.textContainerTablet : 
@@ -162,9 +162,8 @@ function About(props){
                                 classes.textContainer}>
                     <h1 className={classes.header1}>About</h1>
                     <p className={classes.aboutText}>
-                    I am a Full-Stack Web Developer from Rocklin, California who currently resides in Ogden, Utah. I've been coding and doing web design for 
-                    about two years now. I received my Full Stack technical endorsement from Lamba School with whom I've been working for most of my time as 
-                    a developer.
+                    I am a Full-Stack Web Developer from Ogden, Utah. I've been coding and doing web design for about two years now. I received my 
+                    Full Stack technical endorsement from Lamba School with whom I've been working for most of my time as a developer.
                     </p>
                     <br/>
 					<p className={classes.aboutText}>I've already done quite a bit of work in my short time as a developer. Be sure to check out the 
