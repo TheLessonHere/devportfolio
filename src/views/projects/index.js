@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
         marginTop: "10px",
         fontSize: "4em",
         color: "whitesmoke",
-        borderRadius: "10px",
+        borderRadius: "100px",
 
         "&:hover": {
             boxShadow: "2px 2px 5px lightgrey"

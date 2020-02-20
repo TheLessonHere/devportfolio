@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
         marginTop: "10px",
         fontSize: "4em",
         color: "whitesmoke",
-        borderRadius: "10px",
+        borderRadius: "100px",
 
         "&:hover": {
             boxShadow: "2px 2px 5px lightgrey"
@@ -162,8 +162,11 @@ function About(props){
                                 classes.textContainer}>
                     <h1 className={classes.header1}>About</h1>
                     <p className={classes.aboutText}>
-                    I am a Full-Stack Web Developer from Ogden, Utah. I've been coding and doing web design for about two years now. I received my 
-                    Full Stack technical endorsement from Lamba School with whom I've been working for most of my time as a developer.
+                    ► Full-Stack Web Developer from Ogden, Utah
+                    <br/>
+                    ► I've been coding and doing web design for about two years
+                    <br/>
+                    ► Received my Full-Stack technical endorsement from Lamba School with whom I've been working for most of my time as a developer.
                     </p>
                     <br/>
 					<p className={classes.aboutText}>I've already done quite a bit of work in my short time as a developer. Be sure to check out the 

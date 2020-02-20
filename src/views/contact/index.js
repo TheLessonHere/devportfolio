@@ -6,6 +6,8 @@ import ArrowBackSharpIcon from '@material-ui/icons/ArrowBackSharp';
 import EmailSharpIcon from '@material-ui/icons/EmailSharp';
 import RoomSharpIcon from '@material-ui/icons/RoomSharp';
 import PhoneSharpIcon from '@material-ui/icons/PhoneSharp';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 
 const useStyles = makeStyles(theme => ({
@@ -22,7 +24,7 @@ const useStyles = makeStyles(theme => ({
         marginTop: "10px",
         fontSize: "4em",
         color: "whitesmoke",
-        borderRadius: "10px",
+        borderRadius: "100px",
 
         "&:hover": {
             boxShadow: "2px 2px 5px lightgrey"
@@ -30,9 +32,10 @@ const useStyles = makeStyles(theme => ({
     },
     contentContainer: {
         display: "flex",
+        flexFlow: "column",
         justifyContent: "center",
         alignItems: "center",
-        height: "375px",
+        height: "500px",
         maxWidth: "1200px",
         width: "100%",
         marginTop: "200px",
@@ -45,7 +48,7 @@ const useStyles = makeStyles(theme => ({
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        height: "400px",
+        height: "525px",
         maxWidth: "750px",
         width: "95%",
         marginTop: "50px",
@@ -56,9 +59,10 @@ const useStyles = makeStyles(theme => ({
     },
     contentContainerMobile: {
         display: "flex",
+        flexFlow: "column",
         justifyContent: "center",
         alignItems: "center",
-        height: "900px",
+        height: "1050px",
         maxWidth: "650px",
         width: "95%",
         marginTop: "100px",
@@ -131,6 +135,23 @@ const useStyles = makeStyles(theme => ({
         fontSize: "1rem",
         fontFamily: "'Poppins', sans-serif",
         color: "whitesmoke"
+    },
+    linkContainer: {
+        display: "flex",
+        width: "80%",
+        justifyContent: "space-evenly"
+    },
+    linkContainerMobile: {
+        display: "flex",
+        width: "90%",
+        marginTop: "75px",
+        paddingLeft: "10px",
+        paddingRight: "10px",
+        justifyContent: "space-between"
+    },
+    linkIcon: {
+        fontSize: "8em",
+        color: "whitesmoke",
     }
 }));
 
@@ -205,6 +226,14 @@ function Contact(props){
                         </div>
                     </li>
                 </ul>
+                <div className={mobile ? classes.linkContainerMobile : classes.linkContainer}>
+                    <a href="https://github.com/TheLessonHere">
+                    <GitHubIcon className={classes.linkIcon} />
+                    </a>
+                    <a href="https://www.linkedin.com/in/levithomasfswd/">
+                    <LinkedInIcon className={classes.linkIcon} />
+                    </a>
+                </div>
             </div>
         </div>
     )

@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
         marginTop: "10px",
         fontSize: "4em",
         color: "whitesmoke",
-        borderRadius: "10px",
+        borderRadius: "100px",
 
         "&:hover": {
             boxShadow: "2px 2px 5px lightgrey"
@@ -54,7 +54,7 @@ const useStyles = makeStyles(theme => ({
         flexFlow: "column",
         justifyContent: "flex-start",
         alignItems: "center",
-        height: "450px",
+        height: "500px",
         maxWidth: "1200px",
         width: "100%",
         marginTop: "30px",
@@ -69,7 +69,7 @@ const useStyles = makeStyles(theme => ({
     textContainerSmallDesk: {
         display: "flex",
         flexFlow: "column",
-        height: "650px",
+        height: "725px",
         maxWidth: "1000px",
         width: "95%",
         marginTop: "30px",
@@ -84,7 +84,7 @@ const useStyles = makeStyles(theme => ({
     textContainerTablet: {
         display: "flex",
         flexFlow: "column",
-        height: "800px",
+        height: "850px",
         maxWidth: "800px",
         width: "95%",
         marginTop: "30px",
@@ -99,7 +99,7 @@ const useStyles = makeStyles(theme => ({
     textContainerMobile: {
         display: "flex",
         flexFlow: "column",
-        height: "1750px",
+        height: "1800px",
         maxWidth: "300px",
         width: "95%",
         marginTop: "30px",
@@ -159,13 +159,21 @@ function Skills(props){
                                 classes.textContainer}>
                     <h1 className={classes.header1}>Skills</h1>
                     <p className={classes.skillsText}>
-                    I'm a Full-Stack Web Developer, meaning that I have knowledge of both Front and Back-End Web Development and Web Design. I'm fluent 
-                    in HTML, CSS, and Javascript as well as some popular Javascript Frameworks like React.js/Redux for the Front-End and Node.js/Express 
-                    for the Back-End. I've also created REST APIs using Python and Django. I know SQL, and am familiar with TDD (mainly unit testing). 
-                    I've also studied courses on Computer Science and know how to optimize time and space complexity if code ever needs to be refactored 
-                    for optimization. 
-					I'm a very fast learner and can catch on to any system or programming language quite quickly, and I'm willing to work hard to do so 
-                    if it is ever requested of me.
+                    ► Full-Stack Web Developer
+                    <br/>
+                    ► Experience in both Front and Back-End Web Development and Web Design
+                    <br/>
+                    ► Fluent in HTML, CSS, and Javascript as well as some popular Javascript frameworks and libraries like React.js/Redux for the Front-End 
+                    and Node.js/Express for the Back-End
+                    <br/>
+                    ► Also created REST APIs using Python/Django, all of which required knowledge of SQL
+                    <br/>
+                    ► Worked with and am familiar with TDD (mainly unit testing)
+                    <br/>
+                    ► Studied courses on Computer Science and understand how to optimize time and space complexity if code ever needs to be refactored 
+                    for optimization
+                    <br/>
+                    ► Very fast learner and can catch on to any system or programming language quite quickly
                     </p>
                     <br/>
                     <p className={classes.skillsText}>
