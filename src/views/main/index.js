@@ -90,7 +90,11 @@ const useStyles = makeStyles(theme => ({
         width: "25%",
 
         "&:hover svg":{
-            transform: "translateY(-20px) scale(.5)"
+            transform: "translateY(-20px) scale(.5)",
+            color: "#659be6"
+        },
+        "&:hover .button-text":{
+            color: "#659be6"
         },
         "&:hover div":{
             transform: "translateY(-20px)",
@@ -104,7 +108,8 @@ const useStyles = makeStyles(theme => ({
         width: "50%",
 
         "&:hover svg":{
-            transform: "translateY(-20px) scale(.5)"
+            transform: "translateY(-20px) scale(.5)",
+            color: "#659be6"
         },
         "&:hover div":{
             transform: "translateY(-20px)",
